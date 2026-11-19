@@ -18,3 +18,11 @@ async def root():
 async def health_check():
     """Health check endpoint."""
     return {"status": "healthy"}
+
+
+@app.get("/version")
+def get_version():
+    return {
+        "version": "0.1.0",
+        "status": "development"
+    }
